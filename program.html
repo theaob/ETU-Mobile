@@ -12,6 +12,20 @@ and open the template in the editor.
     <title>Ders Programı</title>
     <script type="text/javascript">
         var name;
+        var cevap;
+        var dayInfo = new Array();
+        function printDay(day){
+            var oneDay = document.getElementById("oneDay");
+            var string = "";
+            var saat = 8;
+            for(var i=0;i<13;i++){
+                string += "<ul><li><span class='number'>"+(saat+i)+":30</span><span class='name' id='slot1'>"+dayInfo[day+i*8]+"</span></span></li>";
+            }            
+                        
+            
+            oneDay.innerHTML =string;
+            
+        }
         function back2Future(){
             var dayList = document.getElementById("dayList");
             var oneDay = document.getElementById("oneDay");
@@ -37,24 +51,31 @@ and open the template in the editor.
                 gunlerLink.style.display="";
                 switch(day){
                     case 1:
+                        printDay(day+1);
                         baslik.innerHTML = "Pazartesi";
                         break;
                     case 2:
+                        printDay(day+1);
                         baslik.innerHTML = "Sal\u0131";
                         break;
                     case 3:
+                        printDay(day+1);
                         baslik.innerHTML = "Çar\u015famba";
                         break;
                     case 4:
+                        printDay(day+1);
                         baslik.innerHTML = "Per\u015fembe";
                         break;
                     case 5:
+                        printDay(day+1);
                         baslik.innerHTML = "Cuma";
                         break;
                     case 6:
+                        printDay(day+1);
                         baslik.innerHTML = "Cumartesi";
                         break;
                     case 7:
+                        printDay(day+1);
                         baslik.innerHTML = "Pazar";
                         break;
                 }
@@ -71,7 +92,7 @@ and open the template in the editor.
         }
         function ajax(number)
         {
-            var cevap;
+            
             var xmlhttp;
             if (window.XMLHttpRequest)
             {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -85,7 +106,11 @@ and open the template in the editor.
             {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
-                    cevap=xmlhttp.responseText;
+                    dayInfo = JSON.parse(xmlhttp.responseText);
+                    //cevap=
+                    //document.getElementById("oneDay").innerHTML = cevap;
+                     
+                    
                 }
             }
             xmlhttp.open("GET","getProgram.php?ogrenci="+number,true);
@@ -137,6 +162,7 @@ and open the template in the editor.
         <li><a class="noeffect" href="javascript:displayDay(7)"><span class="name">Pazar</span><span class="arrow"></span></a></li>
     </ul>
     <div id="oneDay" class="musiclist" style=display:none>
+        <!--
         <ul>
             <li><span class="number">08:30</span><span class="name" id="slot1">
             -</span> <span class="place" id="place1"></span></li>
@@ -178,6 +204,8 @@ and open the template in the editor.
             -</span> <span class="place" id="place13"></span></li>
             
         </ul>
+        
+        -->
     </div>
 </div>
 </body>
