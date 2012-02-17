@@ -1,44 +1,44 @@
 <?php
 
 		function printday($array, $day){
-			return '<ul><li><span class="number">08:30</span><span class="name" id="slot1">
+			return '<ul><li><span class="number" style="width:55px">08:30</span><span class="name" id="slot1">
             '.$array[$day].'</span> </li>
 			
-            <li><span class="number">09:30</span><span class="name" id="slot2">
+            <li><span class="number" style="width:55px">09:30</span><span class="name" id="slot2">
             '.$array[$day+8].'</span></li>
             
-            <li><span class="number">10:30</span><span class="name" id="slot3">
+            <li><span class="number" style="width:55px">10:30</span><span class="name" id="slot3">
             '.$array[$day+16].'</span></li>
             
-            <li><span class="number">11:30</span><span class="name" id="slot4">
+            <li><span class="number" style="width:55px">11:30</span><span class="name" id="slot4">
             '.$array[$day+24].'</span></li>
             
-            <li><span class="number">12:30</span><span class="name" id="slot5">
+            <li><span class="number" style="width:55px">12:30</span><span class="name" id="slot5">
             '.$array[$day+32].'</span></li>
             
-            <li><span class="number">13:30</span><span class="name" id="slot6">
+            <li><span class="number" style="width:55px">13:30</span><span class="name" id="slot6">
             '.$array[$day+40].'</span></li>
             
-            <li><span class="number">14:30</span><span class="name" id="slot7">
+            <li><span class="number" style="width:55px">14:30</span><span class="name" id="slot7">
             '.$array[$day+48].'</span></li>
             
-            <li><span class="number">15:30</span><span class="name" id="slot8">
+            <li><span class="number" style="width:55px">15:30</span><span class="name" id="slot8">
             '.$array[$day+56].'</span></li>
             
-            <li><span class="number">16:30</span><span class="name" id="slot9">
+            <li><span class="number" style="width:55px">16:30</span><span class="name" id="slot9">
             '.$array[$day+64].'</span></li>
             
-            <li><span class="number">17:30</span><span class="name" id="slot10">
+            <li><span class="number" style="width:55px">17:30</span><span class="name" id="slot10">
             '.$array[$day+72].'</span></li>
             
-            <li><span class="number">18:30</span><span class="name" id="slot11">
+            <li><span class="number" style="width:55px">18:30</span><span class="name" id="slot11">
             '.$array[$day+80].'</span></li>
             
-            <li><span class="number">19:30</span><span class="name" id="slot12">
+            <li><span class="number" style="width:55px">19:30</span><span class="name" id="slot12">
             '.$array[$day+88].'</span></li>
             
-            <li><span class="number">20:30</span><span class="name" id="slot13">
-            '.$array[$day+96].'</span></li></ul><br/>';
+            <li><span class="number" style="width:55px">20:30</span><span class="name" id="slot13">
+            '.$array[$day+96].'</span></li></ul>';
 		
 		
 		}
