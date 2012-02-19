@@ -8,15 +8,32 @@
 <link rel="apple-touch-icon" sizes="114x114" href="./touch-icon-iphone4.png"/>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />  
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />  
 <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
 <link rel="apple-touch-startup-image" href="loading.png" />  
 <script src="javascript/functions.js" type="text/javascript"></script>
+<!--Bekir buralar yaramaz sanaaa-->
 <script>
 function getProgram(){
-            var numara = prompt("Numaran\u0131zı giriniz","081101017");
+            var numara = prompt("Numaran\u0131zı giriniz","");
             if(numara!=null&&numara!=""){
-                window.location="program.html?numara="+numara;
+				if(numara.substr(0,2)!="st"&&numara.length>7){
+					window.location="program.html?numara="+numara;
+				}else if(numara.substr(0,2)=="st"&&numara.length>9){
+					numara = numara.substr(2);
+					window.location="program.html?numara="+numara;
+				}
+            }
+        }
+		function getMidterm(){
+            var numara = prompt("Numaran\u0131zı giriniz","");
+            if(numara!=null&&numara!=""){
+				if(numara.substr(0,2)!="st"&&numara.length>7){
+					window.location="midterm.html?numara="+numara;
+				}else if(numara.substr(0,2)=="st"&&numara.length>9){
+					numara = numara.substr(2);
+					window.location="midterm.html?numara="+numara;
+				}
             }
         }
 </script>
@@ -44,16 +61,19 @@ var addToHomeConfig = {
     </div>
     <div id="tributton">
         <div class="links">
-		<a href="javascript:getProgram()">Ders Prog.</a><a href="finals.html">Final Prog.</a><a href="midterms.html">Vize Prog.</a>
+		<a href="javascript:getProgram()">Ders Prog.</a><a href="">Final Prog.</a><a href="javascript:getMidterm()">Vize Prog.</a>
         </div>
     </div>
     
     
     <div id="wrapper">
         <ul class="pageitem">
+            <li class="textbox">ETU Mobil hala geliştirilmekte olup ders programı ve vize programı kısımları çalışmaktadır. <b>ETU Mobil sisteminde hata olabilir. Lütfen OİM sistemini kullanmaya devam ediniz.</b></li>
+            <li class="textbox">Final takvimi de açıklandığında ETU Mobil'den ulaşabileceksiniz.</li>
+            <li class="textbox">Nokia ve Blackberry telefonlarda erişme sorunu vardır. Bu telefonlarda Opera kullanabilirsiniz.</li>
             <li class="textbox">ETU Mobil; Ders Programı, Vize ve Final takvimi gibi yerlere akıllı telefonlardan ulaşmanızı sağlar</li>
         
-                <li class="menu"><a href="#">
+            <!--    <li class="menu"><a href="#">
 		<img alt="list" src="thumbs/other.png"/><span class="name">The 
 		Technologies</span><span class="arrow"></span></a></li>
                 
@@ -112,20 +132,13 @@ var addToHomeConfig = {
                 
                 
                 
-                
+                -->
                 
         </ul>
         
     </div>
     
     
-    <div id="footer">
-
-
-            <a class="noeffect" href="http://onurbaykal.com.tr">Onur Baykal</a>
-
-
-    </div>
     
 
 

@@ -32,10 +32,12 @@
 					
 					$homepage = $connection->real_escape_string($homepage);
 					
+					if($name!=""&&$name!=null){
+					
 					$query = "INSERT INTO etumobile VALUES('".$id."','".$homepage."','".$name."')";
 				
 					$connection->query($query);
-					
+					}
 					//print($homepage);
 					
 				}else{
