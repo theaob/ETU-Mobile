@@ -1,7 +1,7 @@
 <?php 
     $host="localhost"; 
     $kullanici="root"; 
-    $sifre=""; 
+    $sifre="1244244"; 
     $vtadi="etunet"; 
 
     $connection=new mysqli($host,$kullanici,$sifre,$vtadi);
