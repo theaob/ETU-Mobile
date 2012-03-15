@@ -12,6 +12,9 @@
     <script src="javascript/functions.js" type="text/javascript"></script>
     <title>Ders Programı</title>
     <script type="text/javascript">
+		function returnMain(){
+			window.location="index.html";
+		}
 		var midtermInfo = new Array();
         function getProgram(){
             numara = window.location.search.substring(8) ;
@@ -21,7 +24,7 @@
                 document.getElementById("textbox1").style.display = "none";
                 document.getElementById("textbox2").style.display = "";
             }else{
-				window.location="index.html";
+				returnMain();
 			}
         }
         function ajax(number)
@@ -54,7 +57,7 @@
 <div id="topbar">
     <div id="title">Program</div>
     <div id="leftnav">
-        <a href="index.html"><img alt="home" src="images/home.png" /></a>
+        <a href="javascript:returnMain()"><img alt="home" src="images/home.png" /></a>
         <a href="javascript:back2Future()" style="display:none" id="gunlerLink">Günler</a>
     </div>
 </div>
