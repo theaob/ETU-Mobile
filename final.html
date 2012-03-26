@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="./touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="./touch-icon-iphone4.png"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />  
+    <link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="javascript/functions.js" type="text/javascript"></script>
+    <title>Ders Programı</title>
+    <script type="text/javascript">
+		function returnMain(){
+			window.location="index.html";
+		}
+		var midtermInfo = new Array();
+        function getProgram(){
+            numara = window.location.search.substring(8) ;
+            if(numara!=null&&numara!=""){
+				document.title=numara;
+				ajax(numara);
+                document.getElementById("textbox1").style.display = "none";
+                document.getElementById("textbox2").style.display = "";
+            }else{
+				returnMain();
+			}
+        }
+        function ajax(number)
+        {
+            
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("finals").innerHTML = xmlhttp.responseText;
+                     
+                    
+                }
+            }
+            xmlhttp.open("GET","getFinal.php?ogrenci="+number,true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body onload="getProgram()">
+<div id="topbar">
+    <div id="title">Program</div>
+    <div id="leftnav">
+        <a href="javascript:returnMain()"><img alt="home" src="images/home.png" /></a>
+        <a href="javascript:back2Future()" style="display:none" id="gunlerLink">Günler</a>
+    </div>
+</div>
+<div id="content">
+	<div id="pageitem">
+    <ul class="pageitem" id="textbox1">
+            <li class="center">Yükleniyor lütfen bekleyiniz.</li>
+    </ul>
+	
+	 <span class="graytitle">Finaller</span>
+
+    <ul class="pageitem" id="finals">
+       
+    
+	
+	</ul>
+	
+	</div>
+ 
+
+</div>
+
+</body>
+</html>

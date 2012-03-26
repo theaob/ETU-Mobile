@@ -36,6 +36,17 @@ function getProgram(){
 				}
             }
         }
+		function getFinal(){
+            var numara = prompt("Numaran\u0131zı giriniz","");
+            if(numara!=null&&numara!=""){
+				if(numara.substr(0,2)!="st"&&numara.length>7){
+					window.location="final.html?numara="+numara;
+				}else if(numara.substr(0,2)=="st"&&numara.length>9){
+					numara = numara.substr(2);
+					window.location="final.html?numara="+numara;
+				}
+            }
+        }
 </script>
 <!--Add2Home-->
 <link href="css/add2home.css" rel="stylesheet" media="screen" type="text/css" />
@@ -61,15 +72,15 @@ var addToHomeConfig = {
     </div>
     <div id="tributton">
         <div class="links">
-		<a href="javascript:getProgram()">Ders Prog.</a><a href="">Final Prog.</a><a href="javascript:getMidterm()">Vize Prog.</a>
+		<a href="">Ders Prog.</a><a href="javascript:getFinal()">Final Prog.</a><a href="">Vize Prog.</a>
         </div>
     </div>
     
     
     <div id="wrapper">
         <ul class="pageitem">
-            <li class="textbox">ETU Mobil hala geliştirilmekte olup ders programı ve vize programı kısımları çalışmaktadır. <b>ETU Mobil sisteminde hata olabilir. Lütfen OİM sistemini kullanmaya devam ediniz.</b></li>
-            <li class="textbox">Final takvimi de açıklandığında ETU Mobil'den ulaşabileceksiniz.</li>
+            <li class="textbox">Final takvimi açıklanmıştır.</li>
+            <li class="textbox">Kesin kayıt zamanına kadar ders programı ve vize programı kısımları kapatılmıştır.</li>
             <li class="textbox">Nokia ve Blackberry telefonlarda erişme sorunu vardır. Bu telefonlarda Opera kullanabilirsiniz.</li>
             <li class="textbox">ETU Mobil; Ders Programı, Vize ve Final takvimi gibi yerlere akıllı telefonlardan ulaşmanızı sağlar</li>
         
