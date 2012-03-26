@@ -53,7 +53,9 @@ for($i=1;$i<71;$i+=5){
 			//echo $ilk;
 			$array2[$a] = "<li class='store'><span class='comment'>".$date."</span><span class='name'>".$ilk[1]." <i>Şube: ".$ilk[2]."</i> 
 						</span><span class='stars'>Sınıf: ".$ilk[0]."</span><span class='starcomment'>".$time."</span></li>";
-		}else if(strlen($ikinci)>3){
+						$a=$a+1;
+		}
+		if(strlen($ikinci)>3){
 			$time ="11:30-14:00";
 			$ilk = explode("<br>",$ikinci);
 			$ilk[0]=substr($ilk[0],9);
@@ -61,7 +63,9 @@ for($i=1;$i<71;$i+=5){
 			$ilk[2]=substr($ilk[2],7);
 			$array2[$a] = "<li class='store'><span class='comment'>".$date."</span><span class='name'>".$ilk[1]." <i>Şube: ".$ilk[2]."</i> 
 						</span><span class='stars'>Sınıf: ".$ilk[0]."</span><span class='starcomment'>".$time."</span></li>";
-		}else if(strlen($ucuncu)>3){
+						$a=$a+1;
+		}
+		if(strlen($ucuncu)>3){
 			$time = "14:30-17:00";
 			$ilk = explode("<br>",$ucuncu);
 			$ilk[0]=substr($ilk[0],9);
@@ -69,7 +73,9 @@ for($i=1;$i<71;$i+=5){
 			$ilk[2]=substr($ilk[2],7);
 			$array2[$a] = "<li class='store'><span class='comment'>".$date."</span><span class='name'>".$ilk[1]." <i>Şube: ".$ilk[2]."</i> 
 						</span><span class='stars'>Sınıf: ".$ilk[0]."</span><span class='starcomment'>".$time."</span></li>";
-		}else if(strlen($dorduncu)>3){
+						$a=$a+1;
+		}
+		if(strlen($dorduncu)>3){
 			$time = "17:30-20:00";
 			$ilk = explode("<br>",$dorduncu);
 			$ilk[0]=substr($ilk[0],9);
@@ -77,8 +83,9 @@ for($i=1;$i<71;$i+=5){
 			$ilk[2]=substr($ilk[2],7);
 			$array2[$a] = "<li class='store'><span class='comment'>".$date."</span><span class='name'>".$ilk[1]." <i>Şube: ".$ilk[2]."</i> 
 						</span><span class='stars'>Sınıf: ".$ilk[0]."</span><span class='starcomment'>".$time."</span></li>";
+						$a=$a+1;
 		}
-		$a=$a+1;
+		
 	}
 
 }
