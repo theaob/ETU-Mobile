@@ -89,8 +89,12 @@ for($i=1;$i<71;$i+=5){
 	}
 
 }
+if(isset($array2)){
 foreach($array2 as $a){
 	echo $a;
+}
+}else{
+	echo "Öğrenci bulunamadı";
 }
 //print_r($array2);
 //echo json_encode($array2);
