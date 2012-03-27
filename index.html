@@ -47,7 +47,9 @@ function checkNumber(a){
 function stCheck(number){
 var patt = /(st)[0-1][0-9]{7,8}/i;
 if(patt.test(number)){
-		return number.substring(2);
+	return number.substring(2);
+}else{
+	return number;
 }
 
 }
