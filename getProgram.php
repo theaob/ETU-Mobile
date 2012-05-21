@@ -5,40 +5,40 @@
             '.$array[$day].'</span> </li>
 			
             <li><span class="number" style="width:55px">09:30</span><span class="name" id="slot2">
-            '.$array[$day+8].'</span></li>
+            '.$array[$day+7].'</span></li>
             
             <li><span class="number" style="width:55px">10:30</span><span class="name" id="slot3">
-            '.$array[$day+16].'</span></li>
+            '.$array[$day+14].'</span></li>
             
             <li><span class="number" style="width:55px">11:30</span><span class="name" id="slot4">
-            '.$array[$day+24].'</span></li>
+            '.$array[$day+21].'</span></li>
             
             <li><span class="number" style="width:55px">12:30</span><span class="name" id="slot5">
-            '.$array[$day+32].'</span></li>
+            '.$array[$day+28].'</span></li>
             
             <li><span class="number" style="width:55px">13:30</span><span class="name" id="slot6">
-            '.$array[$day+40].'</span></li>
+            '.$array[$day+35].'</span></li>
             
             <li><span class="number" style="width:55px">14:30</span><span class="name" id="slot7">
-            '.$array[$day+48].'</span></li>
+            '.$array[$day+42].'</span></li>
             
             <li><span class="number" style="width:55px">15:30</span><span class="name" id="slot8">
-            '.$array[$day+56].'</span></li>
+            '.$array[$day+49].'</span></li>
             
             <li><span class="number" style="width:55px">16:30</span><span class="name" id="slot9">
-            '.$array[$day+64].'</span></li>
+            '.$array[$day+56].'</span></li>
             
             <li><span class="number" style="width:55px">17:30</span><span class="name" id="slot10">
-            '.$array[$day+72].'</span></li>
+            '.$array[$day+63].'</span></li>
             
             <li><span class="number" style="width:55px">18:30</span><span class="name" id="slot11">
-            '.$array[$day+80].'</span></li>
+            '.$array[$day+70].'</span></li>
             
             <li><span class="number" style="width:55px">19:30</span><span class="name" id="slot12">
-            '.$array[$day+88].'</span></li>
+            '.$array[$day+77].'</span></li>
             
             <li><span class="number" style="width:55px">20:30</span><span class="name" id="slot13">
-            '.$array[$day+96].'</span></li></ul>';
+            '.$array[$day+84].'</span></li></ul>';
 		
 		
 		}
@@ -49,7 +49,7 @@
                 $url = "http://kayit.etu.edu.tr/kayit/dersprogrami.php?ogrenci=".$id."&sube=0";
                 
                 $homepage = file_get_contents($url);
-				$homepage = substr($homepage,607);
+				$homepage = substr($homepage,609);
                 $homepage = mb_convert_encoding($homepage, 'UTF-8'); 
                 $turkish = array("ý","Ý","ð","Ð","þ","Þ");
                 $english= array("ı","İ","ğ","Ğ","ş","Ş");
@@ -63,9 +63,8 @@
                                 
                                 
                                 
-                                
                                 for($i=0; $i<7;$i++){
-                                    $array2[$i] = printday($array, $i+2);
+                                    $array2[$i] = printday($array, $i+1);
                                 }
                                 
                                 

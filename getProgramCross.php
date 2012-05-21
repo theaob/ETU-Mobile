@@ -3,9 +3,9 @@
 				//include("connection.php");
 				
 				   $host="localhost"; 
-					$kullanici="root"; 
-					$sifre=""; 
-					$vtadi="etunet"; 
+					$kullanici="etunetne_didem"; 
+					$sifre="didemXonu"; 
+					$vtadi="etunetne_etunet"; 
 
 					$connection=new mysqli($host,$kullanici,$sifre,$vtadi);
 					$connection->set_charset("utf8");

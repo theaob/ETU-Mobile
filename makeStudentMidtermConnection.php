@@ -1,12 +1,6 @@
 <?php
 	if(isset($_GET["ogrenci"]) ){
-				//include("connection.php");
-				
-				   $host="localhost"; 
-					$kullanici="root"; 
-					$sifre=""; 
-					$vtadi="etunet"; 
-
+				include("connection.php");
 					//$connection=mysql_connect($host,$kullanici,$sifre);
 					//mysql_select_db($vtadi,$connection);
 					$connection=new mysqli($host,$kullanici,$sifre,$vtadi);
@@ -50,17 +44,17 @@
 					
 					//asort($newarray); //DERS KODUNA GÖRE SIRALA
 					//ksort($newarray);
-					print_r($newarray);
+					//print_r($newarray);
 					
-					echo "<hr/>";
+					//echo "<hr/>";
 					$k=0;
 					$lastarray;
 					foreach($newarray as $array){
 						$query = "SELECT * FROM etumobile_midterm WHERE lesson_tag='".$array[0]."' AND etumobile_midterm.branch=".$array[1]."";
 						
-						echo $query;
+						//echo $query;
 						
-						echo "<hr/>";
+						//echo "<hr/>";
 						$result = $connection->query($query);
 						/*$result -> bind_param('isssssss',$lesson_id,$lesson_tag,$lesson_name,$branch,$place, $date,$day,$time);
 						$result -> execute();
@@ -68,8 +62,8 @@
 						$result -> fetch();
 						$result -> close();*/
 						$result = $result->fetch_array();
-						print_r($result);
-						echo "<hr/>";
+						//print_r($result);
+						//echo "<hr/>";
 						//
 						if($result['lesson_name']!=null){
 						

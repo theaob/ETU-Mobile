@@ -112,7 +112,7 @@
                     
                 }
             }
-            xmlhttp.open("GET","getProgramCross.php?ogrenci="+number,true);
+            xmlhttp.open("GET","getProgram.php?ogrenci="+number,true);
             xmlhttp.send();
         }
         function getname(number){
@@ -133,7 +133,7 @@
                     document.getElementById("textbox").innerHTML = name;
                 }
             }
-            xmlhttp.open("GET","getNameCross.php?ogrenci="+number,true);
+            xmlhttp.open("GET","getName.php?ogrenci="+number,true);
             xmlhttp.send();
         }
     </script>
